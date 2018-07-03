@@ -34,13 +34,13 @@ The data itself is formatted under seven columns as shown below.
 + *CO2* - The carbon dioxide reading in part-per-million (ppm)
 + *HeatIdx* - Humidity adjusted Temperature in Celsius (see DHT22 for method)
 + *Hum* - Relative Humidity in percent.
-+ *Oc<ID>* - The true occupancy label in persons. Cell may include -1 where room should be vacant but was not directly observed.
++ *Oc`<ID>`* - The true occupancy label in persons. Cell may include -1 where room should be vacant but was not directly observed.
 + *Temp* - Measured temperature in Celsius
 + *Time* - Date and Time, `yyyy-mm-dd HH:MM`
 
 
 
-| | **CO2** | **HeatIdx** | **Hum** | **Oc<ID>** | **Temp** | **Time** |
+| | **CO2** | **HeatIdx** | **Hum** | **Oc`<ID>`** | **Temp** | **Time** |
 | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | 0 | 550.78 | 19.98 | 31.4 | -1 | 21 | 2018-01-11 15:51 |
 | | | | ... | | | |
