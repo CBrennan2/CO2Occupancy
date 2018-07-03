@@ -79,18 +79,19 @@ def show_dat(x,y,z,t_ind):
         y_set=[y[i] for i in range(len(x)) if t_ind[i] in [tid]]
         z_set=[z[i] for i in range(len(x)) if t_ind[i] in [tid]]
 
-        y_max = 650
+        y_max = 450
         for ci in range(c):
             ax_arr[ci].plot(x_set[ci],color=clrs[ci])
             ax_arr[ci].set_ylabel('CO2 (ppm)')
             
-            if max(x_set[ci])>y_max:
-                y_max=975
+            while max(x_set[ci])>y_max:
+                y_max+=100
             ax_arr[c].plot(y_set[ci],color=clrs[ci])#Label same for all series within test.
 
         for ci in range(c):
             ax_arr[ci].set_ylim([325,y_max])
         ax_arr[c].set_ylim([-0.25,5.25])
+        ax_arr[c].set_yticks([0,1,2,3,4,5])
         ax_arr[c].set_ylabel('#Occupants')
         ax_arr[c].set_xlabel('Test Time')
         
